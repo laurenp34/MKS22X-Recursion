@@ -38,13 +38,22 @@ public class recursion{
         return 1;
       }
        int[] fibs = new int[n];
-       n[0] = 1;
-       n[1] = 1;
+       fibs[0] = 1;
+       fibs[1] = 1;
 
-       return fib(n, fibs);
+       return fib(2, fibs);
     }
 
-    
+    public static int fib(int n, int[] fibs) {
+      System.out.println(Arrays.toString(fibs));
+
+      if (n == fibs.length)  {
+        return fibs[n-1];
+      }
+      fibs[n] = fibs[n-1] + fibs[n-2];
+      return fib(n+1,fibs);
+
+    }
 
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(){
@@ -56,6 +65,11 @@ public class recursion{
       System.out.println(sqrt(100,.0000001));
       System.out.println(sqrt(100,.001));
       System.out.println(sqrt(100,.9));
+
+      System.out.println(fib(5));
+      System.out.println(fib(1));
+      System.out.println(fib(2));
+      System.out.println(fib(49));
 
     }
 
