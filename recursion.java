@@ -13,13 +13,13 @@ public class recursion{
       } else if (r < 0) {
         return -1;
       }
-      return squareRoot(r,1);
+      return squareRoot(r,1,tolerance);
 
       }
 
-    public static double squareRoot(double r, double guess) {
+    public static double squareRoot(double r, double guess, double tolerance) {
       double percDiff = Math.abs(guess * guess - r) / r;
-    if (percDiff < .00001) {
+    if (percDiff < tolerance) {
       return guess;
     } else {
       return squareRoot(r, ((r/guess) + guess )/2);
