@@ -6,24 +6,24 @@ public class recursion{
      *precondition: n is non-negative
 
     */
-    public static double sqrt(double n, double tolerance){
+    public static double sqrt(double r, double tolerance){
 
+      if (r == 0) {
+        return 0;
+      } else if (r < 0) {
+        return -1;
+      }
+      return squareRoot(r,1);
+
+      }
+
+    public static double squareRoot(double r, double guess) {
       double percDiff = Math.abs(guess * guess - r) / r;
     if (percDiff < .00001) {
       return guess;
     } else {
       return squareRoot(r, ((r/guess) + guess )/2);
     }
-  }
-
-  public static double squareRoot(double r) {
-    if (r == 0) {
-      return 0;
-    } else if (r < 0) {
-      return -1;
-    }
-    return squareRoot(r,1);
-
     }
 
     /*Recursively find the n'th fibbonaci number in linear time
