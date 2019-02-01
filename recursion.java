@@ -34,9 +34,17 @@ public class recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
-      return 0;
+      if (n<2) {
+        return 1;
+      }
+       int[] fibs = new int[n];
+       n[0] = 1;
+       n[1] = 1;
 
+       return fib(n, fibs);
     }
+
+    
 
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(){
