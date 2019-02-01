@@ -1,3 +1,6 @@
+import java.io.*;
+import java.util.*;
+
 public class recursion{
     /*You may write additional private methods */
 
@@ -22,7 +25,7 @@ public class recursion{
     if (percDiff < tolerance) {
       return guess;
     } else {
-      return squareRoot(r, ((r/guess) + guess )/2);
+      return squareRoot(r, ((r/guess) + guess )/2, tolerance);
     }
     }
 
@@ -31,11 +34,21 @@ public class recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
+      return 0;
 
     }
 
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(){
+      return null;
+    }
+
+    public static void main(String[] args) {
+
+      System.out.println(sqrt(100,.0000001));
+      System.out.println(sqrt(100,.001));
+      System.out.println(sqrt(100,.9));
+
     }
 
 }
