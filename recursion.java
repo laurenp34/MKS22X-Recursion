@@ -73,9 +73,9 @@ public class recursion{
       if (current == end) {
         return result;
       }
-      for (Integer i: result) {
-        i += current;
-        result.add(i);
+      for (int i=0;i<result.size();i++) {
+        result.add(result.get(i));
+        result.set(i,result.get(i)+current);
       }
       result.add(current);
       return makeAllSums(current+1,end,result);
