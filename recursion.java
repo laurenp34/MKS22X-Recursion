@@ -64,16 +64,16 @@ public class recursion{
         return result;
       }
 
-      result.add(1);
-
       return makeAllSums(1,n,result);
     }
 
     public static ArrayList<Integer> makeAllSums(int current, int end, ArrayList<Integer> result) {
-      if (current == end) {
+      if (current > end) {
         return result;
       }
-      for (int i=0;i<result.size();i++) {
+      int size = result.size();
+      for (int i=0;i<size;i++) {
+        System.out.println(result);
         result.add(result.get(i));
         result.set(i,result.get(i)+current);
       }
