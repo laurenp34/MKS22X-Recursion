@@ -56,8 +56,31 @@ public class recursion{
     }
 
     /*As Per classwork*/
-    public static ArrayList<Integer> makeAllSums(){
-      return null;
+    public static ArrayList<Integer> makeAllSums(int n){
+      ArrayList<Integer> result = new ArrayList<Integer>();
+      result.add(0);
+
+      if (n==0) {
+        return result;
+      }
+
+      result.add(1);
+
+      return makeAllSums(1,n,result);
+    }
+
+    public static ArrayList<Integer> makeAllSums(int current, int end, ArrayList<Integer> result) {
+      if (current == end) {
+        return result;
+      }
+      for (Integer i: result) {
+        i += current;
+        result.add(i);
+      }
+      result.add(current);
+      return makeAllSums(current+1,end,result);
+
+
     }
 
     public static void main(String[] args) {
@@ -70,6 +93,8 @@ public class recursion{
       System.out.println(fib(1));
       System.out.println(fib(2));
       System.out.println(fib(47));
+
+      System.out.println(makeAllSums(3));
 
     }
 
