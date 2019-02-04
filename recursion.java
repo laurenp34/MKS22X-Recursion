@@ -77,7 +77,7 @@ public class recursion{
         result.add(result.get(i));
         result.set(i,result.get(i)+current);
       }
-      result.add(current);
+      //result.add(current);
       return makeAllSums(current+1,end,result);
 
 
