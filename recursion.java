@@ -33,18 +33,18 @@ public class recursion{
      *fib(0) = 1; fib(1) = 1; fib(5) = 5
      *precondition: n is non-negative
      */
-    public static long fib(int n){
+    public static int fib(int n){
       if (n<2) {
         return 1;
       }
-       long[] fibs = new long[n];
-       fibs[0] = 1;
+       int[] fibs = new int[n];
+       fibs[0] = 0;
        fibs[1] = 1;
 
        return fib(2, fibs);
     }
 
-    public static long fib(int n, long[] fibs) {
+    public static int fib(int n, int[] fibs) {
       //System.out.println(Arrays.toString(fibs));
 
       if (n == fibs.length)  {
@@ -73,7 +73,7 @@ public class recursion{
       }
       int size = result.size();
       for (int i=0;i<size;i++) {
-        System.out.println(result);
+        //System.out.println(result);
         result.add(result.get(i));
         result.set(i,result.get(i)+current);
       }
