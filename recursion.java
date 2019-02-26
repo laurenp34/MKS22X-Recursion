@@ -226,6 +226,20 @@ public class recursion{
             System.out.println("EXPECTED: [0, 3, 2, 5, 1, 4, 3, 6]");
             System.out.println(makeAllSums(3));           // [0, 3, 2, 5, 1, 4, 3, 6]
             */
+            testSqrt(0);
+            testSqrt(1);
+            testSqrt(2);
+            testSqrt(3);
+            testSqrt(4);
+
+            testFib(0);
+            testFib(1);
+            testFib(2);
+            testFib(3);
+            testFib(4);
+            testFib(5);
+
+            
     }
 
 }
